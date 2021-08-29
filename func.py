@@ -48,7 +48,7 @@ def readingKafkaandUpload(topic):
                     file_data.writelines(message.value.decode('utf-8') + os.linesep)
                 # consumers.commit_async()
     finally:
-            print("=======Out==============")
+            print("Reading from Kafka Topic Over")
     print("here")
     if (os.path.getsize(file) > 0) : 
         uploadtoMinio(file,topic)
